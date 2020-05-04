@@ -1,23 +1,9 @@
 
-<h1>
-    <img src="https://i.imgur.com/G6Mleco.png"> Ryujinx
-    <a href="https://ci.appveyor.com/project/gdkchan/ryujinx?branch=master" target="_blank">
-        <img src="https://ci.appveyor.com/api/projects/status/ssg4jwu6ve3k594s/branch/master?svg=true">
-    </a>
-    <a href="https://discord.gg/N2FmfVc">
-        <img src="https://img.shields.io/discord/410208534861447168.svg">
-    </a>
-</h1>
+<h1>PangoNX Debugger</h1>
 
-<p align="center">
-    <i>An Experimental Switch emulator written in C#</i><br />
-    <br />
-    <img src="https://i.imgur.com/JDLmXJ6.png">
-</p>
+Using the Ryujinx core to create a debugger to debug stuff.
 
-<h5 align="center">
-    A lot of games boot, but only some are playable. See the compatiblity list <a href="https://github.com/Ryujinx/Ryujinx-Games-List/issues" target="_blank">here</a>.
-</h5>
+Below is stuff from the Ryujinx README ->
 
 ## Usage
 
