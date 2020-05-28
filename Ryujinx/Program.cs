@@ -9,9 +9,9 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace Ryujinx
+namespace PangoNX
 {
-    class Program
+    public class Program
     {
         public static string Version { get; private set; }
 
@@ -27,7 +27,7 @@ namespace Ryujinx
 
             Version = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
 
-            Console.Title = $"Ryujinx Console {Version}";
+            Console.Title = $"PangoNX Debugger {Version}";
 
             string systemPath = Environment.GetEnvironmentVariable("Path", EnvironmentVariableTarget.Machine);
             Environment.SetEnvironmentVariable("Path", $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bin")};{systemPath}");
@@ -43,14 +43,14 @@ namespace Ryujinx
             // Initialize Discord integration
             DiscordIntegrationModule.Initialize();
 
-            Logger.PrintInfo(LogClass.Application, $"Ryujinx Version: {Version}");
+            Logger.PrintInfo(LogClass.Application, $"PangoNX Debugger Version: {Version}");
 
             Logger.PrintInfo(LogClass.Application, $"Operating System: {SystemInfo.Instance.OsDescription}");
             Logger.PrintInfo(LogClass.Application, $"CPU: {SystemInfo.Instance.CpuName}");
             Logger.PrintInfo(LogClass.Application, $"Total RAM: {SystemInfo.Instance.RamSizeInMB}");
 
             string localConfigurationPath  = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config.json");
-            string globalBasePath          = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Ryujinx");
+            string globalBasePath          = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PangoNX Debugger");
             string globalConfigurationPath = Path.Combine(globalBasePath, "Config.json");
 
             // Now load the configuration as the other subsystems are now registered
@@ -75,7 +75,7 @@ namespace Ryujinx
                 // No configuration, we load the default values and save it on disk
                 ConfigurationPath = globalConfigurationPath;
 
-                // Make sure to create the Ryujinx directory if needed.
+                // Make sure to create the PangoNX Debugger directory if needed.
                 Directory.CreateDirectory(globalBasePath);
 
                 ConfigurationState.Instance.LoadDefault();

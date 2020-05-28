@@ -96,7 +96,7 @@ namespace Ryujinx.Ui
             _fullScreen.Activated += FullScreen_Toggled;
 
             this.Icon  = new Gdk.Pixbuf(Assembly.GetExecutingAssembly(), "Ryujinx.Ui.assets.Icon.png");
-            this.Title = $"Ryujinx {Program.Version}";
+            this.Title = $"PangoNX Debugger {PangoNX.Program.Version}";
 
             ApplicationLibrary.ApplicationAdded        += Application_Added;
             ApplicationLibrary.ApplicationCountUpdated += ApplicationCount_Updated;
@@ -302,7 +302,7 @@ namespace Ryujinx.Ui
         {
             if (_gameLoaded)
             {
-                GtkDialog.CreateInfoDialog("Ryujinx", "A game has already been loaded", "Please close it first and try again.");
+                GtkDialog.CreateInfoDialog("PangoNX Debugger", "A game has already been loaded", "Please close it first and try again.");
             }
             else
             {
@@ -310,7 +310,7 @@ namespace Ryujinx.Ui
                 {
                     MessageDialog debugWarningDialog = new MessageDialog(this, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo, null)
                     {
-                        Title         = "Ryujinx - Warning",
+                        Title         = "PangoNX Debugger - Warning",
                         Text          = "You have debug logging enabled, which is designed to be used by developers only.",
                         SecondaryText = "For optimal performance, it's recommended to disable debug logging. Would you like to disable debug logging now?"
                     };
@@ -328,7 +328,7 @@ namespace Ryujinx.Ui
                 {
                     MessageDialog shadersDumpWarningDialog = new MessageDialog(this, DialogFlags.Modal, MessageType.Warning, ButtonsType.YesNo, null)
                     {
-                        Title         = "Ryujinx - Warning",
+                        Title         = "PangoNX Debugger - Warning",
                         Text          = "You have shader dumping enabled, which is designed to be used by developers only.",
                         SecondaryText = "For optimal performance, it's recommended to disable shader dumping. Would you like to disable shader dumping now?"
                     };
@@ -487,7 +487,7 @@ namespace Ryujinx.Ui
 
                 _gameTableWindow.Expand = true;
 
-                this.Window.Title = $"Ryujinx {Program.Version}";
+                this.Window.Title = $"PangoNX Debugger {PangoNX.Program.Version}";
 
                 _emulationContext = null;
                 _gameLoaded       = false;
@@ -558,7 +558,7 @@ namespace Ryujinx.Ui
 
         public static void SaveConfig()
         {
-            ConfigurationState.Instance.ToFileFormat().SaveConfig(Program.ConfigurationPath);
+            ConfigurationState.Instance.ToFileFormat().SaveConfig(PangoNX.Program.ConfigurationPath);
         }
 
         private void End(HLE.Switch device)

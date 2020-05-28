@@ -36,10 +36,10 @@ namespace Ryujinx.Ui
                 dialog.Title = "Data Migration Needed";
                 dialog.Icon = new Gdk.Pixbuf(Assembly.GetExecutingAssembly(), "Ryujinx.Ui.assets.Icon.png");
                 dialog.Text =
-                    "The folder structure of Ryujinx's RyuFs folder has been updated and renamed to \"Ryujinx\". " +
-                    "Your RyuFs folder must be copied and migrated to the new \"Ryujinx\" structure. Would you like to do the migration now?\n\n" +
+                    "The folder structure of PangoNX Debugger's RyuFs folder has been updated and renamed to \"PangoNX Debugger\". " +
+                    "Your RyuFs folder must be copied and migrated to the new \"PangoNX Debugger\" structure. Would you like to do the migration now?\n\n" +
                     "Select \"Yes\" to automatically perform the migration. Your old RyuFs folder will remain as it is.\n\n" +
-                    "Selecting \"No\" will exit Ryujinx without changing anything.";
+                    "Selecting \"No\" will exit PangoNX Debugger without changing anything.";
 
                 dialogResponse = dialog.Run();
             }
@@ -82,7 +82,7 @@ namespace Ryujinx.Ui
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             string oldBasePath = Path.Combine(appDataPath, "RyuFs");
-            string newBasePath = Path.Combine(appDataPath, "Ryujinx");
+            string newBasePath = Path.Combine(appDataPath, "PangoNX Debugger");
 
             string oldSaveDir = Path.Combine(oldBasePath, "nand/user/save");
 
@@ -178,7 +178,7 @@ namespace Ryujinx.Ui
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
             string oldBasePath = Path.Combine(appDataPath, "RyuFs");
-            string newBasePath = Path.Combine(appDataPath, "Ryujinx");
+            string newBasePath = Path.Combine(appDataPath, "PangoNX Debugger");
 
             return Directory.Exists(oldBasePath) && !Directory.Exists(newBasePath);
         }

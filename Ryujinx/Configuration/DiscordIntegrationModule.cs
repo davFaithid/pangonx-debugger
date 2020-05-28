@@ -9,7 +9,7 @@ namespace Ryujinx.Configuration
     {
         private static DiscordRpcClient _discordClient;
 
-        private static string LargeDescription = "Ryujinx is a Nintendo Switch emulator.";
+        private static string LargeDescription = "PangoNX Debugger is a Nintendo Switch emulator.";
 
         public static RichPresence DiscordPresence { get; private set; }
 
@@ -64,7 +64,7 @@ namespace Ryujinx.Configuration
 
             if (state == null)
             {
-                state = "Ryujinx";
+                state = "PangoNX Debugger";
             }
             else
             {

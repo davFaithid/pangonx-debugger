@@ -91,7 +91,7 @@ namespace Ryujinx.Ui
                 // Savedata was not found. Ask the user if they want to create it
                 using MessageDialog messageDialog = new MessageDialog(null, DialogFlags.Modal, MessageType.Question, ButtonsType.YesNo, null)
                 {
-                    Title          = "Ryujinx",
+                    Title          = "PangoNX Debugger",
                     Icon           = new Gdk.Pixbuf(Assembly.GetExecutingAssembly(), "Ryujinx.Ui.assets.Icon.png"),
                     Text           = $"There is no savedata for {titleName} [{titleId:x16}]",
                     SecondaryText  = "Would you like to create savedata for this game?",
@@ -195,7 +195,7 @@ namespace Ryujinx.Ui
                     {
                         _dialog = new MessageDialog(null, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Cancel, null)
                         {
-                            Title          = "Ryujinx - NCA Section Extractor",
+                            Title          = "PangoNX Debugger - NCA Section Extractor",
                             Icon           = new Gdk.Pixbuf(Assembly.GetExecutingAssembly(), "Ryujinx.Ui.assets.Icon.png"),
                             SecondaryText  = $"Extracting {ncaSectionType} section from {System.IO.Path.GetFileName(sourceFile)}...",
                             WindowPosition = WindowPosition.Center
@@ -347,7 +347,7 @@ namespace Ryujinx.Ui
 
                                     MessageDialog dialog = new MessageDialog(null, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, null)
                                     {
-                                        Title          = "Ryujinx - NCA Section Extractor",
+                                        Title          = "PangoNX Debugger - NCA Section Extractor",
                                         Icon           = new Gdk.Pixbuf(Assembly.GetExecutingAssembly(), "Ryujinx.Ui.assets.Icon.png"),
                                         SecondaryText  = "Extraction has completed successfully.",
                                         WindowPosition = WindowPosition.Center

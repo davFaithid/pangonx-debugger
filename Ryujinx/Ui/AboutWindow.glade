@@ -75,7 +75,7 @@
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Ryujinx</property>
+                                <property name="label" translatable="yes">PangoNX Debugger</property>
                                 <property name="justify">center</property>
                                 <attributes>
                                   <attribute name="scale" value="2.7000000000000002"/>
@@ -104,12 +104,12 @@
                               <object class="GtkEventBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <signal name="button-press-event" handler="RyujinxButton_Pressed" swapped="no"/>
+                                <signal name="button-press-event" handler="PangoNX DebuggerButton_Pressed" swapped="no"/>
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="tooltip_text" translatable="yes">Click to open the Ryujinx website in your default browser</property>
+                                    <property name="tooltip_text" translatable="yes">Click to open the PangoNX Debugger website in your default browser</property>
                                     <property name="label" translatable="yes">www.ryujinx.org</property>
                                     <property name="justify">center</property>
                                     <attributes>
@@ -171,7 +171,7 @@
                       <object class="GtkLabel" id="disclaimer">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Ryujinx is not affiliated with Nintendo,
+                        <property name="label" translatable="yes">PangoNX Debugger is not affiliated with Nintendo,
 or any of its partners, in any way</property>
                         <property name="justify">center</property>
                         <attributes>
@@ -201,7 +201,7 @@ or any of its partners, in any way</property>
                       <object class="GtkEventBox" id="PatreonButton">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Click to open the Ryujinx Patreon page in your default browser</property>
+                        <property name="tooltip_text" translatable="yes">Click to open the PangoNX Debugger Patreon page in your default browser</property>
                         <signal name="button-press-event" handler="PatreonButton_Pressed" swapped="no"/>
                         <child>
                           <object class="GtkBox">
@@ -244,7 +244,7 @@ or any of its partners, in any way</property>
                       <object class="GtkEventBox" id="GitHubButton">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Click to open the Ryujinx GitHub page in your default browser</property>
+                        <property name="tooltip_text" translatable="yes">Click to open the PangoNX Debugger GitHub page in your default browser</property>
                         <signal name="button-press-event" handler="GitHubButton_Pressed" swapped="no"/>
                         <child>
                           <object class="GtkBox">
@@ -287,7 +287,7 @@ or any of its partners, in any way</property>
                       <object class="GtkEventBox" id="DiscordButton">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Click to open an invite to the Ryujinx Discord server in your default browser</property>
+                        <property name="tooltip_text" translatable="yes">Click to open an invite to the PangoNX Debugger Discord server in your default browser</property>
                         <signal name="button-press-event" handler="DiscordButton_Pressed" swapped="no"/>
                         <child>
                           <object class="GtkBox">
@@ -330,7 +330,7 @@ or any of its partners, in any way</property>
                       <object class="GtkEventBox" id="TwitterButton">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">Click to open the Ryujinx Twitter page in your default browser</property>
+                        <property name="tooltip_text" translatable="yes">Click to open the PangoNX Debugger Twitter page in your default browser</property>
                         <signal name="button-press-event" handler="TwitterButton_Pressed" swapped="no"/>
                         <child>
                           <object class="GtkBox">
@@ -428,7 +428,7 @@ or any of its partners, in any way</property>
                     <property name="can_focus">False</property>
                     <property name="halign">start</property>
                     <property name="margin_left">10</property>
-                    <property name="label" translatable="yes">Ryujinx is an emulator for the Nintendo Switch.
+                    <property name="label" translatable="yes">PangoNX Debugger is an emulator for the Nintendo Switch.
 Please support us on Patreon.
 Get all the latest news on our Twitter or Discord.
 Developers interested in contributing can find out more on our Discord.</property>

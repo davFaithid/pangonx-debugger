@@ -34,7 +34,7 @@ namespace Ryujinx.Ui
             _discordLogo.Pixbuf = new Gdk.Pixbuf(Assembly.GetExecutingAssembly(), "Ryujinx.Ui.assets.DiscordLogo.png", 30 , 30 );
             _twitterLogo.Pixbuf = new Gdk.Pixbuf(Assembly.GetExecutingAssembly(), "Ryujinx.Ui.assets.TwitterLogo.png", 30 , 30 );
 
-            _versionText.Text = Program.Version;
+            _versionText.Text = PangoNX.Program.Version;
         }
 
         private static void OpenUrl(string url)
@@ -54,7 +54,7 @@ namespace Ryujinx.Ui
         }
 
         //Events
-        private void RyujinxButton_Pressed(object sender, ButtonPressEventArgs args)
+        private void PangoNXButton_Pressed(object sender, ButtonPressEventArgs args)
         {
             OpenUrl("https://ryujinx.org");
         }
@@ -66,7 +66,7 @@ namespace Ryujinx.Ui
 
         private void GitHubButton_Pressed(object sender, ButtonPressEventArgs args)
         {
-            OpenUrl("https://github.com/Ryujinx/Ryujinx");
+            OpenUrl("https://github.com/davFaithid/pangonx-debugger");
         }
 
         private void DiscordButton_Pressed(object sender, ButtonPressEventArgs args)
@@ -81,7 +81,7 @@ namespace Ryujinx.Ui
 
         private void ContributorsButton_Pressed(object sender, ButtonPressEventArgs args)
         {
-            OpenUrl("https://github.com/Ryujinx/Ryujinx/graphs/contributors?type=a");
+            OpenUrl("https://github.com/davFaithid/pangonx-debugger/graphs/contributors?type=a");
         }
 
         private void CloseToggle_Activated(object sender, EventArgs args)

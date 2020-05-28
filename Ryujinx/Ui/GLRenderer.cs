@@ -191,7 +191,7 @@ namespace Ryujinx.Ui
 
                 string titleArchSection = _device.System.TitleIs64Bit ? " (64-bit)" : " (32-bit)";
 
-                parent.Title = $"Ryujinx {Program.Version}{titleNameSection}{titleVersionSection}{titleIdSection}{titleArchSection}";
+                parent.Title = $"PangoNX Debugger {PangoNX.Program.Version}{titleNameSection}{titleVersionSection}{titleIdSection}{titleArchSection}";
             });
 
             Thread renderLoopThread = new Thread(Render)
